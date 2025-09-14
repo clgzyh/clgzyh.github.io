@@ -83,5 +83,5 @@ jobs:
         uses: TencentEdgeOne/edgeone-pages-action@v1
         with:
           token: ${{ secrets.EDGEONE_API_TOKEN }}
-          project-name: "xiaoshae-blog"
+          project-name: "clgzyh-blog"
           build-path: "./site"
