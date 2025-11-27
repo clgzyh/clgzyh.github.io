@@ -11,17 +11,17 @@ plugins: [jekyll-paginate]
 paginate: 10
 
 navigation:
- - title: Home
+ - title: 主页
    url: /index.html
- - title: Articles (EN)
+ - title: 文章
    url: /articles
- - title: Articles (中文)
-   url: /articles-zh
- - title: Categories
+ - title: 速查手册
+   url: /cheatsheets
+ - title: 分类
    url: /categories
- - title: About
+ - title: 关于
    url: /about
- - title: Donate
+ - title: 捐赠
    url: /donate
 
 social:

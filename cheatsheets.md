@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Articles (cn-zh)
+title: cheatsheets
 ---
 
 <div id="articles">
-  <h1>Articles</h1>
+  <h1>速查手册</h1>
   <ul class="posts noList">
     {% for post in site.posts %}
       {% if post.url contains "-zh" %}
