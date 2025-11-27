@@ -3,22 +3,28 @@ layout: default
 title: clgzyh Blog
 ---
 
+
 <div class="home" id="home">
   <h1 class="pageTitle">最近发表</h1>
   <ul class="posts noList">
-    {% for post in paginator.posts %}
-      <li>
-        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <h3><a class="post-link" href="{{ post.url }}">{{
-            post.title }}</a></h3>
-        <p class="description">
-        {% if post.description %}
-          {{ post.description | strip_html | strip_newlines | truncate: 270 }}
-        {% else %}
-          {{ post.content | strip_html | strip_newlines | truncate: 270 }}
+    {% assign one_year_ago = "now" | date: "%s" | minus: 31536000 | date: "%s" %}
+    {% for post in site.posts %}
+      {% if post.category != "cheatsheet" and post.categories contains "cheatsheet" == false %}
+        {% assign post_time = post.date | date: "%s" %}
+        {% if post_time >= one_year_ago %}
+          <li>
+            <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="description">
+              {% if post.description %}
+                {{ post.description | strip_html | strip_newlines | truncate: 270 }}
+              {% else %}
+                {{ post.content | strip_html | strip_newlines | truncate: 270 }}
+              {% endif %}
+            </p>
+          </li>
         {% endif %}
-        </p>
-      </li>
+      {% endif %}
     {% endfor %}
   </ul>
   <!-- Pagination links -->
