@@ -3,7 +3,7 @@ layout    : post
 title     : "如何使用jekyll创建个人博客"
 date      : 2025-04-23
 lastupdate: 2025-04-23
-categories: [Jekyll]
+categories: Jekyll
 render_with_liquid: false
 ---
 
