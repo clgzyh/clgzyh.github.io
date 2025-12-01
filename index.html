@@ -7,33 +7,35 @@ title: clgzyh Blog
 <div class="home" id="home">
   <h1 class="pageTitle">最近发表</h1>
   <ul class="posts noList">
-    {% assign one_year_ago = "now" | date: "%s" | minus: 31536000 | plus: 0 %}
-    {% for post in site.posts %}
-      {% if post.category != "cheatsheet" and post.categories contains "cheatsheet" == false %}
-        {% assign post_time = post.date | date: "%s" | plus: 0 %}
-        {% if post_time >= one_year_ago %}
-          <li>
-            <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-            <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
-            <p class="description">
-              {% if post.description %}
-                {{ post.description | strip_html | strip_newlines | truncate: 270 }}
-              {% else %}
-                {{ post.content | strip_html | strip_newlines | truncate: 270 }}
-              {% endif %}
-            </p>
-          </li>
-        {% endif %}
-      {% endif %}
+    {% for post in paginator.posts %}
+      {% unless post.cheatsheet %}
+        <li>
+          <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="description">
+            {% if post.description %}
+              {{ post.description | strip_html | strip_newlines | truncate: 270 }}
+            {% else %}
+              {{ post.content | strip_html | strip_newlines | truncate: 270 }}
+            {% endif %}
+          </p>
+        </li>
+      {% endunless %}
     {% endfor %}
   </ul>
-  <!-- Pagination links -->
+  
+  <!-- 分页链接 -->
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous button__outline">Newer Posts</a> 
+      <a href="{{ paginator.previous_page_path }}" class="previous button__outline">较新的文章</a>
     {% endif %}
+    
+    <span class="page_number">
+      第 {{ paginator.page }} 页 / 共 {{ paginator.total_pages }} 页
+    </span>
+    
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next button__outline">Older Posts</a>
+      <a href="{{ paginator.next_page_path }}" class="next button__outline">较旧的文章</a>
     {% endif %}
   </div>
 </div>

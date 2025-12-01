@@ -5,6 +5,7 @@ date      : 2025-04-23
 lastupdate: 2025-04-23
 categories: Jekyll
 render_with_liquid: false
+cheatsheet: false
 ---
 
 >  本文简单介绍Jekyll如何安装,及简单使用
