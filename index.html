@@ -7,10 +7,10 @@ title: clgzyh Blog
 <div class="home" id="home">
   <h1 class="pageTitle">最近发表</h1>
   <ul class="posts noList">
-    {% assign one_year_ago = "now" | date: "%s" | minus: 31536000 | date: "%s" %}
+    {% assign one_year_ago = "now" | date: "%s" | minus: 31536000 | plus: 0 %}
     {% for post in site.posts %}
       {% if post.category != "cheatsheet" and post.categories contains "cheatsheet" == false %}
-        {% assign post_time = post.date | date: "%s" %}
+        {% assign post_time = post.date | date: "%s" | plus: 0 %}
         {% if post_time >= one_year_ago %}
           <li>
             <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
