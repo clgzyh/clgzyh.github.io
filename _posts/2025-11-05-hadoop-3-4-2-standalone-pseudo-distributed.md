@@ -8,10 +8,7 @@ render_with_liquid: false
 cheatsheet: false
 ---
 
-# Hadoop单机与伪分布式部署
-
-本文使用ubuntu25.04系统基于`java version "1.8.0_161"`和`Hadoop 3.4.2`环境展开
-
+> 本文使用ubuntu25.04系统基于`java version "1.8.0_161"`和`Hadoop 3.4.2`环境展开
 
 
 hadoop基于java开发，需要先安装java环境，这里采用jdk-8u161，所需文件准备链接如下：

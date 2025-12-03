@@ -8,9 +8,9 @@ render_with_liquid: false
 cheatsheet: false
 ---
 
-# ubuntu22.04部署openstack-2024.01
+> 本文主要使用ubuntu22.04使用网络源部署openstack-2024.01版本
 
-
+## 节点分布
 
 | 节点       | 管理网络接口 | 外部网络接口  | 磁盘              |
 | ---------- | ------------ | ------------- | ----------------- |

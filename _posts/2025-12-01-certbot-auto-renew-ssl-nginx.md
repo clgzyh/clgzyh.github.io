@@ -8,9 +8,7 @@ render_with_liquid: false
 cheatsheet: false
 ---
 
-# Certbot自动续签SSL证书-Nginx
-
-本笔记主要记录使用阿里云域名以及阿里云ECS实例创建的web服务器，利用Certbot工具去给Nginx申请证书的过程
+> 本笔记主要记录使用阿里云域名以及阿里云ECS实例创建的web服务器，利用Certbot工具去给Nginx申请证书的过程
 
 
 

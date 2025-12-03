@@ -8,9 +8,7 @@ render_with_liquid: false
 cheatsheet: false
 ---
 
-# Hadoop-3.4.2高可用集群部署
-
-本实验基于前文**Hadoop-3.4.2集群化部署**作为基础环境
+> 本实验基于前文**Hadoop-3.4.2集群化部署**作为基础环境
 
 将当前的 **Hadoop 3.4.2 三节点标准集群（1 NameNode + 2 DataNode）** 升级为 **高可用（HA, High Availability）集群**，核心目标是：**避免单点故障（SPOF）**，即当主 NameNode 宕机时，备用 NameNode 能自动接管服务。
 

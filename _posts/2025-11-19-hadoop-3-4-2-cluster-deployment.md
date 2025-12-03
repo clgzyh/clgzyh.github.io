@@ -8,11 +8,7 @@ render_with_liquid: false
 cheatsheet: false
 ---
 
-# Hadoop-3.4.2集群化部署
-
-
-
-本次实验采用三节点，主节点部署 **NameNode** + **ResourceManager** 纯管理（不运行**DataNode**/**NodeManager**），从节点部署 **DataNode** + **NodeManger**
+> 本次实验采用三节点，主节点部署 **NameNode** + **ResourceManager** 纯管理（不运行**DataNode**/**NodeManager**），从节点部署 **DataNode** + **NodeManger**
 
 
 

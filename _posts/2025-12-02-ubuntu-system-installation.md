@@ -7,8 +7,6 @@ categories: Linux
 cheatsheet: true
 ---
 
-# Ubuntu系统安装教程
-
 >  本文以使用Vmware安装Ubuntu22.04为例
 
 
